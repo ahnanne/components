@@ -32,7 +32,7 @@ const InputContainer = styled.div`
 
 /* -------------------------------------------------------------------------- */
 
-export default function AvatarSettingBox({ initValue = '', id }) {
+export default function AvatarSettingBox({ initValue = '', id, label }) {
 
   const [userName, setUserName] = React.useState(initValue);
   bitFaceUrl = useBitFaceState(userName);
@@ -46,7 +46,7 @@ export default function AvatarSettingBox({ initValue = '', id }) {
         <Input
           id={id}
           type="text"
-          label="현재 프로필 조회 및 수정"
+          label={label}
           value={userName}
           width="34%"
           center={true}
